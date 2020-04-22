@@ -1,1 +1,1 @@
-export const TEST = 'TEST'
+export const GET_STATE_DATA = 'GET_STATE_DATA'

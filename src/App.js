@@ -1,6 +1,8 @@
 import React from 'react'
 
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import MapWrapper from './Map/MapWrapper'
 import StatsLanding from './Stats/StatsLanding'
 

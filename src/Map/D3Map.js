@@ -1,7 +1,7 @@
 import states_hash from '../utils/states_hash' 
 
 export default class D3Map {
-   constructor(el, json, covidData) {
+   constructor(el, json, covidData, getStateDataAction) {
 
         /*  This visualization was made possible by modifying code provided by:
 
@@ -79,7 +79,7 @@ export default class D3Map {
                     .on('click', d => {
                         //console.log(states_hash[d.properties.name], covidData.data)
                         const stateData = covidData.data.find(s => s.state === states_hash[d.properties.name])
-                        console.log(stateData)
+                        getStateDataAction(stateData)
                     })
                     .style("fill", function(d) {
                         // Get data value
