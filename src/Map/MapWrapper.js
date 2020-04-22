@@ -20,10 +20,12 @@ const MapWrapper = ({ getStateDataAction }) => {
     const [ map, setMap ] = useState(null)
     const mapRef = useRef()
 
+    console.log(map)
+
     useEffect(() => {
         const json = require('./us-states.json')
         getData().then(covidData => setMap(new D3Map(mapRef.current, json, covidData, getStateDataAction)))
-    }, [])
+    }, [ getStateDataAction ])
 
     return (
         <StyledMap ref={ mapRef } ></StyledMap>
