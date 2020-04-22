@@ -4,7 +4,7 @@ export const StyledMessageBox = styled.div`
     width: 700px;
     height: 75%;
     position: absolute;
-    left: 25%;
+    left: 40%;
     top: 10%;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -22,22 +22,30 @@ export const StyledLink = styled.a`
     color: black
 `
 
-export const StyledHeader = styled.h1`
+export const StyledHeader = styled.div`
     font-size: 50px;
     text-align: left;
-    padding-left: 5%;
-    color: red;
+    padding-left: 2%;
+    color: orange;
+    padding-top: 1%;
+    border-bottom-style: solid;
+    border: 0 0 1px 0;
+    width: 100%;
+`
+
+export const StateWrapper = styled.div`
+    text-align: center
+    left: 4%;
+    top: 25%;
+    width: 20%;
+    left: 10%;
+    position: absolute;
 `
 
 export const StateName = styled.h2`
     color: orange;
-    position: absolute;
-    left: 2%;
 `
 
 export const StateGrade = styled.div`
     color: orange;
-    position: absolute;
-    left: 4%;
-    top: 40%;
 `

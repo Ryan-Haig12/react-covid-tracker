@@ -5,11 +5,12 @@ import EmptyStateMessage from './EmptyStateMessage'
 import StateStats from './StateStats'
 import { StyledHeader } from '../styled-components/Stats'
 
-
 const StatsLanding = ({ allCovidData }) => {
     return (
         <div>
-            <StyledHeader>Covid</StyledHeader>
+            <StyledHeader>
+                <h1>React Covid Tracker</h1>
+            </StyledHeader>
             { allCovidData.state === undefined ? <EmptyStateMessage /> : <StateStats allCovidData={ allCovidData } /> }
         </div>
     )

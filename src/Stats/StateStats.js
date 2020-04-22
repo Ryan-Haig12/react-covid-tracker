@@ -1,7 +1,7 @@
 import React from 'react'
 
 import states_hash from '../utils/states_hash'
-import { StyledMessageBox, StateName, StateGrade } from '../styled-components/Stats'
+import { StyledMessageBox, StateName, StateGrade, StateWrapper } from '../styled-components/Stats'
 
 const StateStats = ({ allCovidData }) => {
 
@@ -19,16 +19,18 @@ const StateStats = ({ allCovidData }) => {
 
     return (
         <div>
-            <StateName>
-                {getStateName(allCovidData.state)}
-            </StateName>
-            <StateGrade>
-                <h3>Grade: { allCovidData.grade }</h3>
-                <h6>State grade is based on</h6>
-                <h6>the quality and reliability</h6>
-                <h6>of the data </h6>
-                <h6>provided by the state</h6>
-            </StateGrade>
+            <StateWrapper>
+                <StateName>
+                    {getStateName(allCovidData.state)}
+                </StateName>
+                <StateGrade>
+                    <h3>Grade: { allCovidData.grade }</h3>
+                    <h6>State grade is based on</h6>
+                    <h6>the quality and reliability</h6>
+                    <h6>of the data </h6>
+                    <h6>provided by the state</h6>
+                </StateGrade>
+            </StateWrapper>
             <StyledMessageBox>
                 { getStyledStat('Number of Confirmed Cases', allCovidData.positive) }
                 { getStyledStat('Number Of Negative Results', allCovidData.negative) }
