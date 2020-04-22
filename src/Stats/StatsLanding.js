@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import styled from 'styled-components'
 
 import EmptyStateMessage from './EmptyStateMessage'
+import StateStats from './StateStats'
+import { StyledHeader } from '../styled-components/Stats'
 
-const StyledHeader = styled.h1`
-    font-size: 50px;
-    text-align: left;
-    padding-left: 5%;
-    color: red;
-`
 
 const StatsLanding = ({ allCovidData }) => {
-
-    console.log(allCovidData.state)
-
     return (
         <div>
             <StyledHeader>Covid</StyledHeader>
-            { allCovidData.state === undefined && <EmptyStateMessage /> }
+            { allCovidData.state === undefined ? <EmptyStateMessage /> : <StateStats allCovidData={ allCovidData } /> }
         </div>
     )
 }
