@@ -1,0 +1,9 @@
+/* On mouse hover, lighten state color */
+path:hover {
+    fill-opacity: .7;
+}
+        
+/* Legend Font Style */
+body {
+    font: 11px sans-serif;
+}
